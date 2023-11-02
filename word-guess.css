@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+    margin:0;
+    padding:0;
+}
+
+.navbar{
+    text-align:center;
+    border-bottom: 2px solid #333;
+    padding:22.5px;
+    margin-bottom: 0;
+}
+
+.heading{
+    font-size: 25px;
+}
+
+.bar{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    visibility:hidden;
+}
+
+.show{
+  visibility:visible;
+}
+
+.hourglass{
+    font-size: 40px;
+    animation: spin 1.5s linear infinite;
+}
+
+.letter-boxes{
+    max-width: 295px;
+    width: 100%;
+    margin: 10px auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.letter-box{
+    height:45px;
+    width: 45px;
+    font-size: 30px;
+    text-transform: uppercase;
+    border: 3px solid #ccc;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.correct{
+    background-color: rgb(46, 182, 46);
+    color: white;
+}
+
+.close{
+    background-color:darkgoldenrod;
+    color: white;
+}
+
+.wrong{
+    background-color: rgb(70, 64, 64);
+    color: white;
+}
+
+.invalid{
+    animation: flash 1s;
+}
+
+@keyframes flash {
+    5%{
+        border-color: crimson;
+    }
+    100%{
+        border-color: rgb(70, 64, 64);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.winner{
+    animation: rainbow 4s linear infinite;
+}
+
+@keyframes rainbow {
+    100%,
+    0% {
+      color: rgb(141, 20, 20);
+    }
+    8% {
+      color: rgb(173, 96, 19);
+    }
+    16% {
+      color: rgb(166, 166, 11);
+    }
+    25% {
+      color: rgb(96, 169, 22);
+    }
+    33% {
+      color: rgb(15, 122, 15);
+    }
+    41% {
+      color: rgb(16, 128, 72);
+    }
+    50% {
+      color: rgb(9, 124, 124);
+    }
+    58% {
+      color: rgb(19, 84, 149);
+    }
+    66% {
+      color: rgb(18, 18, 138);
+    }
+    75% {
+      color: rgb(64, 19, 109);
+    }
+    83% {
+      color: rgb(90, 18, 90);
+    }
+    91% {
+      color: rgb(87, 11, 49);
+    }
+    
+}
