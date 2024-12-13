@@ -86,7 +86,7 @@ async function init(){
             done = true;
             return;
         }else if(currentRow === ROUNDS){
-            alert(`You loose to ${word} biyaatch`);
+            alert(`You loose the word was :${word}`);
             done = true;
         }
         
